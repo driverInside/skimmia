@@ -13,7 +13,7 @@
  * @param {integer} n - The limit of the loop
  */
 const fnOption = (n) => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 1; i <= n; i++) {
     ifThen(
       i % 3 === 0,
       () => {

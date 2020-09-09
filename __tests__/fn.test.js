@@ -28,14 +28,29 @@ describe('Function option', () => {
   })
 
   it('should replace 3 factors by "Music"', () => {
-    
+    fnOption(100)
+    for (let i = 2; i < 100; i += 3) {
+      // avoid 15 factors
+      if (!(i % 15)) {
+        expect(console.log.mock.calls[i][0]).toEqual('Music')
+      }
+    }
   })
 
   it('should replace 5 factors by "TI"', () => {
-    
+    fnOption(100)
+    for (let i = 4; i < 100; i += 5) {
+      // avoid 15 factors
+      if (!(i % 15)) {
+        expect(console.log.mock.calls[i][0]).toEqual('TI')
+      }
+    }
   })
 
   it('should replace 15 factors by "Musical"', () => {
-    
+    fnOption(100)
+    for (let i = 14; i < 100; i += 15) {
+      expect(console.log.mock.calls[i][0]).toEqual('Musical')
+    }
   })
 })
