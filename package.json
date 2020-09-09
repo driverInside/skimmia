@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "challenge:or": "node ./src/or.js",
+    "challenge:fn": "node ./src/fn.js",
     "test": "jest"
   },
   "devDependencies": {
